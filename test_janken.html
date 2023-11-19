@@ -1,0 +1,63 @@
+<html>
+
+<body>
+    <h3>あなたの手を選んで下さい！</h3>
+    <div style="display:flex;">
+        <div class="janken_button_display">
+            <button id="gu" class="janken_button" onclick=start_janken(this.id)>
+                <image id="gu_image" src="./グー.jpg" class="janken_image">
+            </button>
+        </div>
+        <div class="janken_button_display">
+            <button id="choki" class="janken_button" onclick="start_janken(this.id)">
+                <image id="choki_image" src="./チョキ.jpg" class="janken_image">
+            </button>
+        </div>
+        <div class="janken_button_display">
+            <button id="pa" class="janken_button" onclick="start_janken(this.id)">
+                <image id="pa_image" src="./パー.jpg" class="janken_image">
+            </button>
+        </div>
+    </div>
+
+    <div class="container">【相手の手】</div>
+    <div id="opponent_hand" class="janken_button_display"></div>
+
+    <div class="container">【結果】</div>
+    <div id="result"></div>
+</body>
+
+
+</html>
+
+<script src="./test_janken.js"></script>
+
+<style>
+    .janken_button_display {
+        width: 150px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .janken_button {
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .janken_button:hover {
+        border: 5px solid #686262;
+    }
+
+    .janken_image {
+        text-align: center;
+        width: 100px;
+        height: 100px;
+    }
+
+    .container {
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+</style>
